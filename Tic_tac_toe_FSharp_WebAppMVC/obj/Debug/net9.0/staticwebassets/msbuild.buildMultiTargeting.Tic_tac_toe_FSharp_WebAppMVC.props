@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Tic_tac_toe_FSharp_WebAppMVC.props" />
+</Project>

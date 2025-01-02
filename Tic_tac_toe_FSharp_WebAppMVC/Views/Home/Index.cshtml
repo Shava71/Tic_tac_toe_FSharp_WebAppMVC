@@ -1,0 +1,71 @@
+﻿@* @model Tuple< *@
+@* *@
+@*     Tic_tac_toe_FSharp_WebAppMVC.Models.Player option array array, *@
+@* Tic_tac_toe_FSharp_WebAppMVC.Models.Player, *@
+@* Tic_tac_toe_FSharp_WebAppMVC.Models.GameState, *@
+@* Tic_tac_toe_FSharp_WebAppMVC.Controllers.GameMode > *@
+@* *@
+@* @{ *@
+@*     ViewData["Title"] = "Tic-Tac-Toe Game"; *@
+@* } *@
+@* *@
+@* <h1>@ViewData["Title"]</h1> *@
+@* *@
+@* <h3>Choose Game Mode</h3> *@
+@* <form asp-action="SetGameMode" method="post"> *@
+@*     <input type="radio" name="mode" value="PlayerVsPlayer" @(if Model.Item4 = Tic_tac_toe_FSharp_WebAppMVC.Controllers.GameMode.PlayerVsPlayer then "checked" else "") /> Player vs Player *@
+@*     <input type="radio" name="mode" value="PlayerVsAI" @(if Model.Item4 = Tic_tac_toe_FSharp_WebAppMVC.Controllers.GameMode.PlayerVsAI then "checked" else "") /> Player vs AI *@
+@*     <button type="submit">Set Mode</button> *@
+@* </form> *@
+@* *@
+@* @if (Model.Item3 = Tic_tac_toe_FSharp_WebAppMVC.Models.GameState.InProgress) { *@
+@*     <h2>Current Player: @(if Model.Item2 = Tic_tac_toe_FSharp_WebAppMVC.Models.Player.X then "X" else "O")</h2> *@
+@* } else { *@
+@*     <h2>Game Over: @Model.Item3</h2> *@
+@* } *@
+@* *@
+@* <hr/> *@
+@* *@
+@* <h3>Game Board</h3> *@
+@* *@
+@* <div style="display: grid; grid-template-columns: repeat(5, 60px); grid-gap: 5px;"> *@
+@*     @for i in 0..4 do *@
+@*     @for j in 0..4 do *@
+@*     <button *@
+@*         class="cell" *@
+@*         style="width: 60px; height: 60px; font-size: 20px;" *@
+@*         onclick="location.href='@Url.Action("MakeMove", new { x = i, y = j })'"> *@
+@*         @(Model.Item1.[i].[j] |> Option.map (fun p -> if p = Tic_tac_toe_FSharp_WebAppMVC.Models.Player.X then "X" else "O") |> Option.defaultValue "-") *@
+@*     </button> *@
+@*     @done *@
+@*     @done *@
+@* </div> *@
+@* *@
+@* <hr/> *@
+@* *@
+@* <form asp-action="ResetGame" method="post"> *@
+@*     <button type="submit">Reset Game</button> *@
+@* </form> *@
+@* *@
+@* <div style="margin-top: 20px;"> *@
+@*     <h3>Instructions</h3> *@
+@*     <p>The game is played on a 5x5 board. Player X and Player O take turns.</p> *@
+@*     <p><strong>Game Mode:</strong> You can choose Player vs Player or Player vs AI mode.</p> *@
+@* </div> *@
+@* *@
+@* @section Styles { *@
+@*     <style> *@
+@*         .cell { *@
+@*             font-size: 30px; *@
+@*             padding: 10px; *@
+@*             text-align: center; *@
+@*             cursor: pointer; *@
+@*             background-color: #f3f3f3; *@
+@*             border: 1px solid #ddd; *@
+@*             font-weight: bold; *@
+@*         } *@
+@*         .cell:hover { *@
+@*             background-color: #e0e0e0; *@
+@*         } *@
+@*     </style> *@
+@* } *@

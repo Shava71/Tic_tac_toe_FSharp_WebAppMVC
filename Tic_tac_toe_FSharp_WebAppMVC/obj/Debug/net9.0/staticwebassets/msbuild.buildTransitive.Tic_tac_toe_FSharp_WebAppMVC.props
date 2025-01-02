@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Tic_tac_toe_FSharp_WebAppMVC.props" />
+</Project>
