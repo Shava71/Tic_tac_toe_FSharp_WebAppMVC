@@ -441,3 +441,4 @@
 /Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.pdb
 /Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.genruntimeconfig.cache
 /Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/ref/Tic_tac_toe_FSharp_WebAppMVC.dll
+/Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.sourcelink.json

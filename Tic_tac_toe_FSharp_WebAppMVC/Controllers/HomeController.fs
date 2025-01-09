@@ -8,11 +8,6 @@ open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
 open Tic_tac_toe_FSharp_WebAppMVC.Models
 
-// Define the possible game modes
-type GameMode =
-    | PlayerVsPlayer = 0
-    | PlayerVsAI = 1
-
 type HomeController (logger : ILogger<HomeController>, game : GameModel, gameModeState: GameModeState) =
     inherit Controller()
 
@@ -25,16 +20,19 @@ type HomeController (logger : ILogger<HomeController>, game : GameModel, gameMod
         let currentPlayer = game.GetCurrentPlayer()
         let gameState = game.GetGameState()
         
-        // Начало формирования HTML-разметки
+        printfn "%A" (gameModeState.GetMode())
+        printfn "%d" (gameModeState.GetDifficulty())
+        
+        // Начало формирования HTML-разметки 
         let sb = StringBuilder()
 
         // Формируем форму для выбора режима игры
         sb.AppendLine($"""
         <form method="post" action="/Home/SetGameMode">
             <label for="playerVsPlayer">Player vs Player</label>
-            <input type="radio" id="playerVsPlayer" name="mode" value="0" {if gameMode = 0 then "checked" else ""}>
+            <input type="radio" id="playerVsPlayer" name="mode" value="0" {if gameMode = GameMode.PlayerVsPlayer then "checked" else ""}>
             <label for="playerVsAI">Player vs AI</label>
-            <input type="radio" id="playerVsAI" name="mode" value="1" {if gameMode = 1 then "checked" else ""}>
+            <input type="radio" id="playerVsAI" name="mode" value="1" {if gameMode = GameMode.PlayerVsAI then "checked" else ""}>
             <button type="submit">Set Mode</button>
         </form>
         """) |> ignore
@@ -113,9 +111,11 @@ type HomeController (logger : ILogger<HomeController>, game : GameModel, gameMod
     // Выбор режима игры
     [<HttpPost>]
     member this.SetGameMode(mode: int) =
-        match mode with
-        | 0 | 1 -> gameModeState.SetMode(mode)
-        | _ -> ()
+        let gameMode =
+            match mode with
+            | 0 -> GameMode.PlayerVsPlayer
+            | 1 -> GameMode.PlayerVsAI
+        gameModeState.SetMode(gameMode)
         game.ResetGame()
         this.RedirectToAction("Index")
     
@@ -123,26 +123,40 @@ type HomeController (logger : ILogger<HomeController>, game : GameModel, gameMod
  
     [<HttpPost>]
     member this.MakeMove(x: int, y: int) =
-        printfn "Making move at position (%d, %d)" x y
-        
-        if game.GetGameState() = GameState.InProgress && gameModeState.GetMode() = 0 then
-            // Режим PlayerVsPlayer
-            game.MakeMove(x, y)
-        
-        elif game.GetGameState() = GameState.InProgress && gameModeState.GetMode() = 1 then
-            // Режим PlayerVsAI
-            // if game.GetCurrentPlayer() = Player.X then
-            //     game.MakeMove(x, y)
-            // if game.GetGameState() = GameState.InProgress then
-            //     game.MakeAIMove()
-            lock game (fun () ->
-            if game.GetCurrentPlayer() = Player.X then
-                game.MakeMove(x, y)
-            if game.GetGameState() = InProgress then
-                game.MakeAIMove())
+        lock game (fun () -> 
+            // Handle the Player vs Player mode
+            if gameModeState.GetMode() = GameMode.PlayerVsPlayer then
+                // Make move if the game is still in progress
+                let (newBoard, newGameState, nextPlayer) = 
+                    game.MakeMove(x, y)
+                
+                // Set the new game state and current player
+                game.SetBoard(newBoard)
+                game.SetGameState(newGameState)
+                game.SetCurrentPlayer(nextPlayer)
+            
+            // Handle the Player vs AI mode
+            elif gameModeState.GetMode() = GameMode.PlayerVsAI && game.GetCurrentPlayer() = Player.X then
+                // Make move for Player X
+                let (newBoard, newGameState, nextPlayer) = 
+                    game.MakeMove(x, y)
+                
+                game.SetBoard(newBoard)
+                game.SetGameState(newGameState)
+                game.SetCurrentPlayer(nextPlayer)
 
-        this.RedirectToAction("Index")
-   
+                if newGameState = GameState.InProgress then
+                    // If the game is still ongoing, make the AI move
+                    // game.MakeAIMove()
+                    let (newBoard, newGameState, nextPlayer) = game.MakeAIMove()
+                    game.SetBoard(newBoard)
+                    game.SetGameState(newGameState)
+                    game.SetCurrentPlayer(nextPlayer)
+
+            // Proceed to redirect after processing the move
+            this.RedirectToAction("Index")
+        )
+       
     // Сброс игры
     member this.ResetGame() =
         game.ResetGame()
