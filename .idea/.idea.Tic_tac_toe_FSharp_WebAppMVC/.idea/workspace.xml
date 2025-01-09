@@ -8,7 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1058066-6c29-4965-abc4-afd548b49add" name="Changes" comment="" />
+    <list default="true" id="f1058066-6c29-4965-abc4-afd548b49add" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/bin/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/bin/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/bin/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/bin/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.AssemblyInfo.fs" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.AssemblyInfo.fs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/Tic_tac_toe_FSharp_WebAppMVC.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/ref/Tic_tac_toe_FSharp_WebAppMVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/ref/Tic_tac_toe_FSharp_WebAppMVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/refint/Tic_tac_toe_FSharp_WebAppMVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/obj/Debug/net9.0/refint/Tic_tac_toe_FSharp_WebAppMVC.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,9 +26,27 @@
   <component name="DpaMonitoringSettings">
     <option name="firstShow" value="false" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Shava71&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Shava71/Tic_tac_toe_FSharp_WebAppMVC.git&quot;,
+    &quot;accountId&quot;: &quot;14560438-db0a-4ac2-8816-6f741c9abf49&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/Controllers/HomeController.fs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mac/Desktop/Study/ФиЛП/KR/Tic_tac_toe_FSharp_WebAppMVC/Tic_tac_toe_FSharp_WebAppMVC/Controllers/HomeController.fs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tic_tac_toe_FSharp_WebAppMVC/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -27,14 +54,17 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2qRnJVJD6kl2wKvLGrXEyNKQzY5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.Tic_tac_toe_FSharp_WebAppMVC: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.Tic_tac_toe_FSharp_WebAppMVC: https.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,14 +118,27 @@
       <workItem from="1734684942341" duration="6550000" />
       <workItem from="1735595807899" duration="9334000" />
       <workItem from="1735660681912" duration="3539000" />
+      <workItem from="1735664243210" duration="107150000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <option name="closed" value="true" />
+      <created>1736434706155</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736434706155</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
